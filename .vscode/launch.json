@@ -1,0 +1,15 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "C Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/loxc",
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"MIMode": "gdb",
+			"preLaunchTask": "Execute debug make"
+		}
+	]
+}

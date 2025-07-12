@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Execute make",
+			"type": "shell",
+			"command": "make",
+			"args": [],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build"
+		},
+		{
+			"label": "Execute debug make",
+			"type": "shell",
+			"command": "make DEBUG=1",
+			"args": [],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build"
+		},
+		{
+			"label": "Execute make clean",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"clean"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build"
+		}
+	]
+}
