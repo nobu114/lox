@@ -3,42 +3,42 @@ CC = gcc
 # Base flags for all builds. This is a very strict set.
 # Use '\' for readability.
 BASE_CFLAGS = \
-    -Wall \
-    -Wextra \
-    -pedantic \
-    -Wshadow \
-    -Wconversion \
-    -Wsign-compare \
-    -Wformat=2 \
-    -Wundef \
-    -Wunreachable-code \
-    -Wlogical-op \
-    -Wfloat-equal \
-    -Wstrict-prototypes \
-    -Wmissing-prototypes \
-    -Wmissing-declarations \
-    -Wredundant-decls \
-    -Wattributes \
-    -Wbad-function-cast \
-    -Winline \
+	-Wall \
+	-Wextra \
+	-pedantic \
+	-Wshadow \
+	-Wconversion \
+	-Wsign-compare \
+	-Wformat=2 \
+	-Wundef \
+	-Wunreachable-code \
+	-Wlogical-op \
+	-Wfloat-equal \
+	-Wstrict-prototypes \
+	-Wmissing-prototypes \
+	-Wmissing-declarations \
+	-Wredundant-decls \
+	-Wattributes \
+	-Wbad-function-cast \
+	-Winline \
 	-Wdeclaration-after-statement
-    # -Wno-unused-parameter # Uncomment if you have functions with intentionally unused parameters (e.g., callbacks)
+	# -Wno-unused-parameter # Uncomment if you have functions with intentionally unused parameters (e.g., callbacks)
 CPPFLAGS = -Iinclude
 LDFLAGS =
 
 # --- Build Configuration (Debug vs Release) ---
 ifeq ($(DEBUG), 1)
-    CFLAGS = $(BASE_CFLAGS) -g -O0 -std=c11
-    BUILD_TYPE = Debug
+	CFLAGS = $(BASE_CFLAGS) -g -O0 -std=c11
+	BUILD_TYPE = Debug
 else
-    CFLAGS = $(BASE_CFLAGS) -O2 -std=c11
-    BUILD_TYPE = Release
+	CFLAGS = $(BASE_CFLAGS) -O2 -std=c11
+	BUILD_TYPE = Release
 endif
 
 # --- Optional: Treat warnings as errors ---
 # Use 'make WERROR=1' to enable this
 ifeq ($(WERROR), 1)
-    CFLAGS += -Werror
+	CFLAGS += -Werror
 endif
 
 # --- Project Structure ---
