@@ -47,8 +47,7 @@ REPORTSDIR = reports
 TARGET = loxc
 
 # --- Library Configuration ---
-# !!! ここをあなたのライブラリに合わせて変更してください !!!
-LIB_NAME = your_library_name
+LIB_NAME = libmonstera
 LIB_SUBMODULE_DIR = external/$(LIB_NAME)
 # ライブラリのヘッダファイルがあるディレクトリを指定
 LIB_INCDIR = $(LIB_SUBMODULE_DIR)/src
