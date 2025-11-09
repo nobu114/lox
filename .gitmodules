@@ -1,0 +1,3 @@
+[submodule "external/libmonstera"]
+	path = external/libmonstera
+	url = git@github.com:nobu114/libmonstera.git
